@@ -1,0 +1,595 @@
+<html>
+	<head>
+		<title>Original Design</title>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/materialize.min.css">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style type="text/css">
+		/*FONTS*/
+		@font-face {font-family: GlacialIndifference-Regular;src: url('GlacialIndifference-Regular.otf');}		
+		@font-face {font-family: AlexBrush-Regular;src: url('AlexBrush-Regular.ttf');}	
+		/*BODY*/
+		body
+		{
+			background-image: url('bb.jpg');
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			min-height:100vh;
+		}
+		/*HEADER*/
+		h1,h4
+		{
+			text-align: left;
+ 			color: white;
+ 			font-family: GlacialIndifference-Regular;
+ 			margin:10px;
+		}
+		h1
+		{
+			font-size: 275%;
+			text-shadow: 0px 1px 1px #ddd,
+                     0px 2px 1px #d6d6d6,
+                     0px 3px 1px #ccc,
+                     0px 4px 1px #c5c5c5,
+                     0px 5px 1px #c1c1c1,
+                     0px 6px 1px #bbb,
+                     0px 7px 1px #777,
+                     0px 8px 3px rgba(100, 100, 100, 0.4),
+                     0px 9px 5px rgba(100, 100, 100, 0.1),
+                     0px 10px 7px rgba(100, 100, 100, 0.15),
+                     0px 11px 9px rgba(100, 100, 100, 0.2),
+                     0px 12px 11px rgba(100, 100, 100, 0.25),
+                     0px 13px 15px rgba(100, 100, 100, 0.3);
+
+		}
+		h4
+		{
+			font-size: 150%;
+			text-decoration: none;
+		}
+		h3
+		{
+			font-size: 150%;
+font-family: 'Raleway', sans-serif; 		}
+		p
+		{
+			font-family: 'Raleway', sans-serif; 
+			font-size: 120%;
+			font-weight: 500;
+			padding: 20px;
+		}
+		h2
+		{
+font-family: 'Raleway', sans-serif; 		}
+		/*SEARCH BAR*/
+		.placeholder
+		{
+			color: white;
+		}
+		.search 
+		{
+			width: 100%;
+			padding-top: 60px;
+			height: 15px;
+			margin-top: 10px;
+		}
+		/*NAVBAR*/
+		.nav-wrapper
+		{
+			background-color:#3F51B5 ;
+			padding-top: 20px;
+		}
+		.nav-wrapper ul li
+		{
+			margin-left:10px;
+		}
+		nav .button-collapse i
+		{
+			margin-top: -18px;
+		}
+		.btn
+		{
+			color:white;
+			background-color: #3F51B5;
+		}
+		.btn.hover
+		{
+			background-color: black;
+		}
+		.best
+		{
+			margin-left: 0%;
+		}
+		/*SIDE-NAV*/
+		.side-nav
+		{
+			background-color: #3F51B5;
+			padding-top: 55px;
+		
+		}
+	/*	element.style {
+   left: -1000px !important; 
+}*/
+		.side-nav li
+		{
+			padding:0px !important;
+
+		}
+		.side-nav li a
+		{
+			font-family: GlacialIndifference-Regular;
+			font-size: 20px;
+			color: white;
+		}
+		.side-nav i.material-icons
+		{
+			font-size: 2rem;
+		}
+		
+
+		/*SOCIAL ICONS*/
+	
+		/*DIVS*/
+		/*home*/
+		#home,#about,#aoi,#contact,#blog,#projects
+		{
+			background-color: white;
+			width: 95%;
+			height:auto;
+			margin:0 auto;
+			border-radius: 3px;
+			padding:20px;
+			margin-top: 10px;
+			-webkit-animation: cd-bounce-2 0.6s;
+	    -moz-animation: cd-bounce-2 0.6s;
+	    animation: cd-bounce-2 0.6s;
+		}
+		.para
+		{
+			padding: 20px;
+			font-family: 'Raleway', sans-serif; 
+			font-weight: 500;
+			font-size: 120%;
+		}
+		.card-reveal p
+		{
+			padding: 20px;
+			font-family: 'Raleway', sans-serif; 
+			font-weight: 500;
+		}
+
+		.smallheading
+		{
+			font-family:'Raleway', sans-serif;
+			color: white;
+			font-size: 1.5rem;
+			margin-top:-15px;
+		}
+		/*footer*/
+		.footer
+		{
+			width:100%;
+			background-color: white;
+			height: auto;
+			padding:1px;
+			margin-top: 20px;
+			text-align: center;	
+
+		}
+		/*AREAS OF INTEREST*/
+		.collapsible-header
+		{
+			background-color: #5C6BC0;
+			color:white;
+		}
+		.collapsible-body
+		{
+			background-color:white ;
+			color:black;
+		}		
+		/* TIMELINE*/
+		.cd-date
+		{
+			color: white;
+		}
+		/*WORK*/
+		.card-content
+		{
+			background-color:#5c6bc0   ;
+			color: white;
+		}
+		.card-action a
+		{
+			color:#1a237e !important;
+			text-align: right;
+		}
+		.card-title
+		{
+			line-height: 21px !important;
+			font-size: 14px !important;
+		}
+		</style>
+	</head>
+	<body onload="welcome()">
+
+	<!--<div class="col s5 offset-s3 hide-on-med-and-down">
+		
+		<h4><i class="material-icons">email</i>&nbsp;vinaychandil17@gmail.com&nbsp;|&nbsp;<i class="material-icons">perm_phone_msg</i>&nbsp;8337803543</h4>	
+		</div>
+		<div class="col s3 offset-s1">        
+     
+    <div class="search hide-on-med-and-down" >
+     		   <div class="input-field"style="background-color:white;margin-left:35px">
+          <input id="search" type="search" placeholder="Search the website" required>
+          
+        </div>
+    </div>
+  </div>-->
+
+  <div class="navbar-fixed">
+	<nav>
+    <div class="nav-wrapper ">
+    	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons " style="font-size:4rem;">menu</i></a><h class="right smallheading hide-on-large-only">Vinay Chandil&nbsp;&nbsp;</h>
+      <ul class="best hide-on-med-and-down"><li class="left"><h1>VINAY CHANDIL</h1></li>    
+				<li><a class="waves-effect waves-light btn" id="showhome">HOME</a></li>
+				<li><a class="waves-effect waves-light btn"	id="showabout">ABOUT ME</a></li>
+				<li><a class="waves-effect waves-light btn"	id="showaoi">INTEREST</a></li>
+				<li><a class="waves-effect waves-light btn" id="showtimeline">TIMELINE</a></li>
+				<li><a class="waves-effect waves-light btn"	id="showprojects">WORK/PROJECTS</a></li>
+				<!--<li><a class="waves-effect waves-light btn"	id="showblog">BLOG</a></li>-->
+				<li><a class="waves-effect waves-light btn"	id="showcontact">CONTACT</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+   			<li><a class="waves-effect waves-light" href="javascript:clickhome()"><i class="material-icons  left">home</i>HOME</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clickabout()"><i class="material-icons left">tag_faces</i>ABOUT ME</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clickaoi()"><i class="material-icons left">group_work</i>INTEREST</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clicktimeline()"><i class="material-icons left">timeline</i>TIMELINE</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clickprojects()"><i class="material-icons left">work</i>WORK</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clickblog()"><i class="material-icons left">book</i>BLOG</a></li>
+        <li><a class="waves-effect waves-light" href="javascript:clickcontact()"><i class="material-icons left">contacts</i>CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div id="home" >
+	 <div class="card hide-on-large-only">
+	  <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator " src="vinay4.jpg">
+	  </div>
+	  <div class="card-content" style="background-color:white">
+	    <span class="card-title activator grey-text text-darken-4" style="font-family:'Raleway', sans-serif;">
+	    	To be successful you must accept all challenges that come your way. You can't just accept the ones you like.
+	    </span>
+	  </div>
+	  <div class="card-reveal">
+	    <span class="card-title grey-text text-darken-4">
+	    	<i class="medium material-icons right">close</i>
+	    </span>
+	    <p class="para">
+	    	Hi<br>I'm a Web Developer in India , making the web more enjoyable by creating attractive websites for buisness and individuals who need an effective online presence.<br><br> Through this site, I intend to keep links to my projects, blogs and thoughts, things that interest me and might perhaps interest you as well.
+	    </p>
+	  </div>
+	 </div>
+     <div class="z-depth-2 para hide-on-med-and-down row ">
+     	<div class="col s3">
+     		<img class="materialboxed z-depth-2 responsive-img" width="170px" src="vinay3.jpg">
+     	</div>
+     	<div class="col s9 valign-wrapper">
+     		<h2 class="valign"style="font-family:AlexBrush-Regular">
+     			" The will to win, the desire to succeed, the urge to reach your full potential... these are the keys that will unlock the door to personal excellence. "
+     		</h2>
+  		</div>
+  	 </div>
+		 <p class="z-depth-2 para hide-on-med-and-down ">
+		 I'm a Web Developer in India , making the web more enjoyable by creating attractive websites for buisness and individuals who need an effective online presence.<br>Through this site, I intend to keep links to my projects, blogs and thoughts, things that interest me and might perhaps interest you as well. 
+		 </p>
+  </div>
+  <!--ABOUT ME PAGE-->
+  <div id="about">
+   <p class="z-depth-2 para">
+   	I am a second year Undergraduate Student of the Department of Mathematics, Indian Institute of Technology Kharagpur enrolled in its Integrated M.Sc course of Mathematics and Computing.<br><br>I'm from Gwalior (Madhya Pradesh).<br><br>I'm currently a web team member at the Students' Alumni Cell , IIT KHARAGPUR working to manage existing and building new sites.
+	 </p>
+  </div>
+	<!--AREAS OF INTEREST-->
+  <div id="aoi" style="padding:20px">
+	  <ul class="collapsible popout" data-collapsible="expandable">
+	    <li>
+	      <div class="collapsible-header active"><i class="large material-icons">assignment</i>Technical</div>
+	      <div class="collapsible-body">
+	      	<p>
+	      		Essays can consist of a number of elements, including: literary criticism, political manifestos, learned arguments, observations of daily life, recollections, and reflections of the author. Almost all modern essays are written in prose, but works in verse have been dubbed essays (e.g. Alexander Pope's An Essay on Criticism and An Essay on Man). While brevity usually defines an essay, voluminous works like 
+	      	</p>
+	     	</div>
+	    </li>
+	    <li>
+	      <div class="collapsible-header active"><i class="material-icons">place</i>Sports</div>
+	      <div class="collapsible-body">
+	      	<p>
+	      		Essays can consist of a number of elements, including: literary criticism, political manifestos, learned arguments, observations of daily life, recollections, and reflections of the author. Almost all modern essays are written in prose, but works in verse have been dubbed essays (e.g. Alexander Pope's An Essay on Criticism and An Essay on Man). While brevity usually defines an essay, voluminous works like
+	      	</p>
+	      </div>
+	    </li>
+	    <li>
+	      <div class="collapsible-header active"><i class="material-icons">whatshot</i>Art</div>
+	      <div class="collapsible-body">
+	      	<p>
+	      		Essays can consist of a number of elements, including: literary criticism, political manifestos, learned arguments, observations of daily life, recollections, and reflections of the author. Almost all modern essays are written in prose, but works in verse have been dubbed essays (e.g. Alexander Pope's An Essay on Criticism and An Essay on Man). While brevity usually defines an essay, voluminous works like
+	      	</p>
+	      </div>
+	    </li>
+	  </ul>
+  </div>
+<!-- TIMELINE PAGE -->
+<section id="cd-timeline" class="cd-container para">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">2016</h2>
+				<p>Coming Soon...</p>
+				<span class="cd-date">2016</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">2015</h2>
+				<p><i class="material-icons">done</i>
+					&nbsp;Worked as a web team member at Students' Alumni Cell at Office of Alumni Affairs and International Relations, IIT Kharagpur.
+				</p>
+				<span class="cd-date">2015</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+							<h2 class="hide-on-large-only">2014</h2>
+
+				<p><i class="material-icons">done</i>&nbsp;Enrolled in Maths and Computing course in IIT KHARAGPUR.<br><br><i class="material-icons">done</i>&nbsp;Stood Amongst top 1 percent students in the Joint Entrance
+Examination conducted by Indian Institute of Technology.<br><br>
+<i class="material-icons">done</i>&nbsp;Selected in top 160 students in Indian Statistical Institute entrance exam.<br><br>
+<i class="material-icons">done</i>&nbsp;Appeared for BITS entrance exam and scored 350.<br><br>
+<i class="material-icons">done</i>&nbsp;Ranked 7906 out of 14 lakh students in JEE mains entrance exam.
+
+</p>
+				<span class="cd-date">2014</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">2013</h2>
+				<p><i class="material-icons">done</i>&nbsp;Appeared in State engineering exam (MPPET) and ranked 402</p>
+				<span class="cd-date">2013</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">2012</h2>
+				<p><i class="material-icons">done</i>&nbsp;Passed the CBSE Higher secondary examination with a 88.4 percentage. </p>
+				<span class="cd-date">2012</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">2010</h2>
+				<p><i class="material-icons">done</i>&nbsp;Passed the CBSE secondary examination with 95 percentage.</p>
+				<span class="cd-date">2010</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2 class="hide-on-large-only">1994</h2>
+				<p><i class="material-icons">done</i>&nbsp;Born</p>
+				<span class="cd-date">1994</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+  <!--WORK/PROJECT-->
+   <div class="row" id="projects">
+        <div class="col s12 l6 m6">
+          <div class="card">
+            <div class="card-image">
+              <a href="www.alumnimeet.iitkgp.ernet.in" target="_blank"><img class="img-responsive"src="meet.PNG"></a>
+            </div>
+            <div class="card-content">
+              <p class="para">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="www.alumnimeet.iitkgp.ernet.in" target="_blank">13th ANNUAL ALUMNI MEET</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="card">
+            <div class="card-image">
+              <a href="www.alumnimeet.iitkgp.ernet.in/sac/website" target="_blank"><img src="sac.PNG"></a>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="www.alumnimeet.iitkgp.ernet.in/sac/website" target="_blank">Students' Alumni Cell-IIT KHARAGPUR</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <a href="www.alumnimeet.iitkgp.ernet.in/sac/website" target="_blank"><img src="bot.jpg"></a>
+            </div>
+            <div class="card-content">
+              <p>Worked with a team of 12 member in making a Grid Follower.The making and functioning of the bot can be seen using these links:</p>
+            </div>
+            <div class="card-action">
+            	<a href="#">GRID FOLLOWER BOT</a>
+              <a href="https://drive.google.com/open?id=1y7PBfNRzUNZhcx2Wp8T1uTL3WwLXWGu1CK4uoPRw6BE" target="_blank">REPORT-1</a>
+              <a href="https://drive.google.com/open?id=1TmqW75Zxr1NmKVbkEfnoEq4QE9RPfY_tR5p0Wf5l-iQ" target="_blank">REPORT-2</a>
+              <a href="https://drive.google.com/open?id=1AZhUcMji3ocixUfnFucnVGzvK4umwiLsEsXnQ7i-yaw" target="_blank">REPORT-3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="blog" >
+      <div class="row">
+      <div class="col s12 l6 m6">
+      <div class="video-container z-depth-2 ">
+        <iframe src="https://www.youtube.com/embed/Q8TXgCzxEnw"frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+        <div class="col s12 m6 l6">
+      <div class="video-container z-depth-2 ">
+        <iframe src="https://www.youtube.com/embed/Q8TXgCzxEnw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+      </div>
+      </div>
+  <!--CONATCT PAGE-->
+  <div id="contact">
+  	<div class="row">
+  		<div class="col s12 m6 l6">
+				<iframe class="z-depth-2" frameborder="0" scrolling="no" marginheight="10" marginwidth="10" width="100%" height="50%" src="https://maps.google.com/maps?hl=en&q=radhakrishnan hall of residence,IIT kharagpur,INDIA&ie=UTF8&t=hybrid&z=15&iwloc=B&output=embed"></iframe>			
+			</div>
+			<div class="col s12 m6 l6 z-depth-2" style="padding:20px;background-color:white">
+
+  		<div class="offsets8" style="color:black">
+
+  		<h3>LEAVE A MESSAGE</h3>
+  		</div>
+  		<div class="input-field offset-s8">
+  		<input id="name" type="text">
+      <label for="name">Name</label>
+  		</div>
+  		<div class="input-field offset-s8">
+  		<input id="email" type="email" class="validate">
+      <label for="email">Email</label>
+      </div>
+      <div class="input-field offset-s8 ">
+  		<input id="message" type="text">
+      <label for="message">Message OR Suggestion</label>
+  		</div>
+  		<div class="offset-s8">
+  		<button type="submit" class="waves-effect waves-light btn" id="submit" required style="background-color:red">SUBMIT</button>
+</div>
+  		</div>
+  		</div>
+  </div>
+  <div class="footer">
+  <p>&copy; All rights reserved<br> Designed and developed by&nbsp;:&nbsp;VINAY CHANDIL</p>
+  </div>
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/main.js"></script> <!-- Resource jQuery -->
+		<script src="js/materialize.min.js"></script>
+
+		  <script type="text/javascript">		
+
+
+  function welcome()
+  {
+        $("#home").show()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();
+  }
+  </script>
+  <script>
+ $(document).ready(function(){
+ 	$('.button-collapse').sideNav({
+      closeOnClick: false
+    }
+  );
+ $(".button-collapse").sideNav();
+    $("#showhome").click(function(){
+        $("#home").show()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();
+    });
+    $("#showtimeline").click(function(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").show()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();   
+		 });
+    $("#showabout").click(function(){
+$("#home").hide()+$("#about").show()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		});
+    $("#showaoi").click(function(){
+$("#home").hide()+$("#about").hide()+$("#aoi").show()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		});
+    $("#showblog").click(function(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").show()+$("#contact").hide();   
+	 });
+    $("#showprojects").click(function(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").show()+$("#blog").hide()+$("#contact").hide();    
+		});
+    $("#showcontact").click(function(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").show();    
+		});
+
+    
+});
+
+  
+
+  </script>
+<!--SIDE-NAVBAR-->
+   <script>
+  function clickcontact(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").show();    
+		
+}
+  function clickhome(){
+$("#home").show()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		
+}
+  function clickaoi(){
+$("#home").hide()+$("#about").hide()+$("#aoi").show()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		
+}
+  function clickblog(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").show()+$("#contact").hide();  
+		
+}
+  function clickprojects(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").show()+$("#blog").hide()+$("#contact").hide();    
+		
+}
+  function clicktimeline(){
+$("#home").hide()+$("#about").hide()+$("#aoi").hide()+$("#cd-timeline").show()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		
+}
+  function clickabout(){
+$("#home").hide()+$("#about").show()+$("#aoi").hide()+$("#cd-timeline").hide()+$("#projects").hide()+$("#blog").hide()+$("#contact").hide();    
+		
+}</script>
+	</body>
+</html>
+
+  
+  
+	
